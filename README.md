@@ -2,7 +2,6 @@
 The most flexible skeleton loading for VueJS
 
 ### See it in action
-<img src="https://media.giphy.com/media/tqMpuy5dDhpj6axyPL/giphy.gif" width="550" />
 
 ## Install package
 ```
@@ -73,8 +72,6 @@ data() {
 | Prop    | Type   | Description                                         | Default   | Required |
 | ------- | ------ | --------------------------------------------------- | --------- | -------- |
 | content | Object | the data object prop for your data while loading    |           | true     |
-
-### Content Props
-| Prop    | Description                          | Block Types                        |
-| ------- | ------------------------------------ | ---------------------------------- |
-| type    | the style of the loading block       | block, text, round, avatar, row    |
+| width   | String | main container width                                | auto      | Optional |
+| height  | String | main container height                               | auto      | Optional |
+| padding | String | main container padding                              | 16px      |          |
