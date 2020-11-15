@@ -1,17 +1,49 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <v-skeleton
+      :content="loaderContent"
+      width="500px"
+      height="300px"
+      padding="16px"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      loaderContent: [
+        {
+          type: 'avatar',
+          vAlignment: 'start',
+          lines: [
+            {
+              type: 'block',
+              width: '100px'
+            },
+            {
+              type: 'block',
+              width: '200px'
+            },
+          ]
+        },
+        {
+          type: 'block',
+          width: '500px'
+        },
+        {
+          type: 'block',
+          width: '280px'
+        },
+        {
+          type: 'block',
+          width: '130px'
+        },
+      ]
+    }
   }
 }
 </script>
