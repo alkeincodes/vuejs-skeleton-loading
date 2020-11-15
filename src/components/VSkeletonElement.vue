@@ -66,24 +66,28 @@
           marginLeft: c.marginLeft ? c.marginLeft : '0',
         }
 
-        switch(c.type) {
-          case 'block':
-            return style
-          case 'text':
-            return style
-          case 'row':
-            style.height = c.height ? c.height : 'auto',
-            style.alignItems = c.alignItems ? (c.alignItems != 'center' ? `flex-${c.alignItems}` : 'center') : 'center'
-            style.justifyContent = c.justifyContent ? c.justifyContent : 'initial'
-            return style
-          case 'round':
-            style.height = c.size ? c.size : '50px'
-            style.width = c.size ? c.size : '50px'
-            return style
-          case 'avatar':
-            style.height = c.size ? c.size : '50px'
-            style.width = c.size ? c.size : '50px'
-            return style
+        if(!c.type) {
+          throw new SyntaxError("'type' is undefined.")
+        } else {
+          switch(c.type) {
+            case 'block':
+              return style
+            case 'text':
+              return style
+            case 'row':
+              style.height = c.height ? c.height : 'auto',
+              style.alignItems = c.alignItems ? (c.alignItems != 'center' ? `flex-${c.alignItems}` : 'center') : 'center'
+              style.justifyContent = c.justifyContent ? c.justifyContent : 'initial'
+              return style
+            case 'round':
+              style.height = c.size ? c.size : '50px'
+              style.width = c.size ? c.size : '50px'
+              return style
+            case 'avatar':
+              style.height = c.size ? c.size : '50px'
+              style.width = c.size ? c.size : '50px'
+              return style
+          }
         }
       },
       lineStyle(c) {

@@ -51,14 +51,14 @@
 
 <style lang="scss">
   .skeleton-bg {
+    position: relative;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-name: shimmer;
     animation-timing-function: linear;
-    background: linear-gradient(to right, #E4E4E4 8%, #F0F0F0 25%, #E4E4E4 53%);
+    background: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #ececec 40%, #f6f7f8 100%);
     background-size: 800px 100px;
-    position: relative;
   }
   .v-skeleton {
     &__type {
