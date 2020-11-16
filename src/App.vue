@@ -42,6 +42,24 @@ export default {
           type: 'block',
           width: '130px'
         },
+        {
+          type: 'row',
+          marginTop: '32px',
+          children: [
+            {
+              type: 'text',
+              height: '16px',
+            },
+            {
+              type: 'text',
+              height: '16px',
+            },
+            {
+              type: 'text',
+              height: '16px',
+            },
+          ]
+        }
       ]
     }
   }
